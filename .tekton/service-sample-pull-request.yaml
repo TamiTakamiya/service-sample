@@ -28,6 +28,9 @@ spec:
     value: 5d
   - name: dockerfile
     value: Containerfile
+  - name: build-args
+    value:
+    - BASE_IMAGE=quay.io/redhat-user-workloads/rh-ee-ttakamiy-tenant/content-sample:1.0.1738677471
   pipelineSpec:
     description: |
       This pipeline is ideal for building container images from a Containerfile while maintaining trust after pipeline customization.

@@ -3,7 +3,7 @@
     "packageRules": [
       {
         "matchDatasources": ["docker"],
-        "matchFileNames": ["Containerfile"],
+        "matchFileNames": [".tekton/*.yaml"],
         "matchPackageNames": [
           "quay.io/redhat-user-workloads/rh-ee-ttakamiy-tenant/content-sample"
         ],
