@@ -1,2 +1,3 @@
-FROM podman quay.io/redhat-user-workloads/rh-ee-ttakamiy-tenant/content-sample:1.0.1738677471
+ARG BASE_IMAGE=redhat-user-workloads/rh-ee-ttakamiy-tenant/content-sample:latest
+FROM ${BASE_IMAGE} as production
 COPY LICENSE ./LICENSE
