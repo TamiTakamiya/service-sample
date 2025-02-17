@@ -1,18 +1,15 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "packageRules": [
+    "customManagers": [
       {
-        "matchDatasources": ["docker"],
-        "matchFileNames": [".tekton/*.yaml"],
-        "matchPackageNames": [
-          "quay.io/redhat-user-workloads/rh-ee-ttakamiy-tenant/content-sample"
+        "customType": "regex",
+        "datasourceTemplate": "docker",
+        "fileMatch": [".tekton/*.yaml"],
+        "matchStrings": [
+          "BASE_IMAGE=(?<depName>[^:]+?):(?<currentValue)[\\d\\.]+)"
         ],
-        "versioning": "semver"
+        "versioningTemplate": "semver"
       }
     ],
-    "dockerfile": {
-      "enabled": true,
-      "schedule": ["* * * * *"]
-    },
     "automerge": true
   }
