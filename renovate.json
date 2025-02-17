@@ -6,7 +6,7 @@
         "datasourceTemplate": "docker",
         "fileMatch": [".tekton/*.yaml"],
         "matchStrings": [
-          "BASE_IMAGE=(?<depName>[^:]+?):(?<currentValue)[\\d\\.]+)"
+          "BASE_IMAGE=(?<depName>[^:]+?):(?<currentValue>[\\d\\.]+)"
         ],
         "versioningTemplate": "semver"
       }
